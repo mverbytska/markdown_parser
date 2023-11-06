@@ -1,4 +1,9 @@
 use my_parser_verbytska::*;
+use pest_derive::Parser;
+
+#[derive(Parser)]
+#[grammar = "./grammar.pest"]
+pub struct grammar;
   pub fn main() {
-      println!("{:?}", list_parser::list("[1,1,2,3,5,8]"))
+     
   }

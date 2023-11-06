@@ -10,3 +10,5 @@ license = "MIT"
 
 [dependencies]
 peg = "0.8.2"
+pest = "2.7.5"
+pest_derive = "2.7.5"
