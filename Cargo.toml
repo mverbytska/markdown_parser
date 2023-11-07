@@ -1,5 +1,13 @@
+##  Markdown parser in Rust
+### Simple parser for Markdown language written in Rust as a part of course project at NaUKMA
+
+
+### Technical overview:
+#### 1. Takes string in markdown style as an input
+#### 2. Returns string with HTML tags to represent the result
+#### *KMA, Autumn, 2023*  
 [package]
-name = "my_parser_verbytska"
+name = "markdown_parser"
 version = "0.1.0"
 edition = "2021"
 readme  = "Readme.md"
@@ -10,7 +18,13 @@ license = "MIT"
 
 [dependencies]
 anyhow = "1.0.75"
+clippy = "0.0.302"
+fmt = "0.1.0"
 peg = "0.8.2"
 pest = "2.7.5"
 pest_derive = "2.7.5"
 thiserror = "1.0.50"
+
+[lib]
+name = "lib"
+path = "./src/lib.rs"
