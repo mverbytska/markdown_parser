@@ -5,7 +5,7 @@
 
 ### Option 1: run the following Cargo command in your project directory 
 ```
-cargo agg markdown_parser
+cargo add markdown_parser
 ```
 
 ### Option 2: add the following line to the [dependencies] section in Cargo.toml file
