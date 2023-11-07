@@ -1,6 +1,25 @@
-field = { (ASCII_DIGIT | "." | "-")+ }
-record = { field ~ ("," ~ field)* }
-file = { SOI ~ (record ~ ("\r\n" | "\n"))* ~ EOI }
+/// Markdown grammar rules for defining heading, bold, italic and plain text styles
+
+markdown = { heading | bold | italic | text }
+
+/// Heading styling
+
+heading = { (("#" ~ (!("\n") ~ ANY)*)+ ~ "\n") }
+
+/// Plain text styling
+
+text = { (!("#" | "*" | "\n") ~ ANY)+ }
+
+/// Bold text styling
+
+bold = { "**" ~ text ~ "**" }
+
+/// Italic text styling
+
+italic = { "*" ~ text ~ "*" }
+
+
+
 
 
 
