@@ -1,4 +1,4 @@
-## Markdown parser in Rust
+## Markdown Parser in Rust
 ### Simple parser for Markdown language written in Rust as a part of course project at NaUKMA
 
 ### Installation
@@ -8,7 +8,7 @@
 cargo add markdown_parser
 ```
 
-### Option 2: add the following line to the [dependencies] section in Cargo.toml file
+### Option 2: add the following line to the *[dependencies]* section in Cargo.toml file
 
 ```
 markdown_parser="0.1.0" 
