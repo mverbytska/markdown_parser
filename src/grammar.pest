@@ -1,6 +1,6 @@
 /// Markdown grammar rules for defining heading, bold, italic and plain text styles
 
-markdown = { heading | bold | italic | text }
+markdown = { heading | bold | text | list | link}
 
 /// Heading styling
 
@@ -10,13 +10,22 @@ heading = { (("#" ~ (!("\n") ~ ANY)*)+ ~ "\n") }
 
 text = { (!("#" | "*" | "\n") ~ ANY)+ }
 
+
+/// List styling 
+list = { ("*" | "-") ~ " " ~ text }
+
 /// Bold text styling
 
 bold = { "**" ~ text ~ "**" }
 
-/// Italic text styling
 
-italic = { "*" ~ text ~ "*" }
+
+/// Link styling
+link = { "[" ~ link_text ~ "]" ~ "(" ~ link_url ~ ")" }
+
+link_text = { (!"]" ~ text)+ }
+
+link_url = { (!")" ~ text)+ }
 
 
 
