@@ -6,7 +6,7 @@ use anyhow::{anyhow, Result};
 #[grammar = "./grammar.pest"]
 pub struct MarkdownParser;
 
-pub fn to_markdown(input: &str) -> Result<()> {
+pub fn to_html(input: &str) -> Result<()> {
     let pairs = MarkdownParser::parse(Rule::markdown, input)?;
 
     for pair in pairs {
