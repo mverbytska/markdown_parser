@@ -1,6 +1,8 @@
 ## Markdown Parser in Rust
 ### Simple parser for Markdown language written in Rust as a part of course project at NaUKMA
 
+### Link to this parser on crates.io: 
+
 ### Installation
 
 ### Option 1: run the following Cargo command in your project directory 
@@ -16,11 +18,10 @@ markdown_parser="0.1.0"
 
 ### Technical overview:
 
-#### 1. Takes string in markdown style as an input
+#### 1. Takes a text file with a single string in markdown style as an input
 ```
-fn main() {
-    println!("{}", markdown_parser::to_html("# Hello! My name is Mariia."));
-}
+cargo run to_html </path/to/file.md>
+
 ```
 
 #### 2. The output will be a string with HTML tags to represent the result
