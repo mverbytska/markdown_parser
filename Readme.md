@@ -28,7 +28,6 @@ cargo run to_html </path/to/file.md>
 
 ```
 <h1>Hello! My name is Mariia.</h1>
-
 ```
 
 ### Check documentation 
