@@ -19,13 +19,23 @@ markdown_parser="0.1.0"
 #### 1. Takes string in markdown style as an input
 ```
 fn main() {
-    println!("{}", markdown_parser::to_html("# Hello! My name is *Mariia*."));
+    println!("{}", markdown_parser::to_html("# Hello! My name is Mariia."));
 }
 ```
 
 #### 2. The output will be a string with HTML tags to represent the result
 
 ```
-<h1>Hello! My name is <em>Mariia</em>.</h1>
+<h1>Hello! My name is Mariia.</h1>
+
+```
+
+### Check documentation 
+
+#### In order to see the documentation, you can use the following commands in your command line:
+```
+cargo doc
+
+cargo doc --open
 ```
 #### *KMA, Autumn, 2023*  
