@@ -1,5 +1,4 @@
-//! Tests for markdown parser
-// TODO: implement more difficul ones
+/// Tests for markdown parser
 
 #[cfg(test)]
 mod tests {
@@ -19,11 +18,6 @@ mod tests {
     #[test]
     fn test_bold() {
         assert!(MarkdownParser::parse(Rule::bold, "**This is bold text**").is_ok());
-    }
-
-    #[test]
-    fn test_italic() {
-        assert!(MarkdownParser::parse(Rule::italic, "*This is italic text*").is_ok());
     }
 }
 

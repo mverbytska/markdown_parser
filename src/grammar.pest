@@ -1,31 +1,29 @@
-/// Markdown grammar rules for defining heading, bold, italic and plain text styles
+/// Grammar for my markdown parser 
 
-markdown = { heading | bold | text | list | link}
+///Root rule with all possible single rules
+content = _{ heading | text | list | link | bold }
 
 /// Heading styling
-
-heading = { (("#" ~ (!("\n") ~ ANY)*)+ ~ "\n") }
+heading = { "#" ~ (!("\n") ~ ANY)* ~ ("\n"?) }
 
 /// Plain text styling
 
-text = { (!("#" | "*" | "\n") ~ ANY)+ }
+text = { (!("\n" | "#" | "*" | "-" | "[" | "]" | "(" | ")" | "**") ~ ANY)+ }
 
-
-/// List styling 
-list = { ("*" | "-") ~ " " ~ text }
+/// List styling
+list = { ("- " | "* ") ~ (!"\n" ~ ANY)+ }
 
 /// Bold text styling
 
-bold = { "**" ~ text ~ "**" }
-
-
+//bold = { "**" ~ text ~ "**" }
+bold = { "**" ~ (!("**") ~ ANY)* ~ "**" }
 
 /// Link styling
 link = { "[" ~ link_text ~ "]" ~ "(" ~ link_url ~ ")" }
 
-link_text = { (!"]" ~ text)+ }
+link_text = { (!"]" ~ ANY)* }
 
-link_url = { (!")" ~ text)+ }
+link_url = { (!")" ~ ANY)* }
 
 
 
