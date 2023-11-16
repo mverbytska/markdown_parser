@@ -30,10 +30,7 @@ pub fn to_html(input: &str) -> Result<String> {
                 let text_content = pair.as_str();
                 html_output.push_str(&format!("<p>{}</p>", text_content));
             }
-            Rule::list => {
-                let list_item = pair.as_str();
-                html_output.push_str(&format!("<li>{}</li>", list_item.trim_start_matches('-').trim()));
-            }                          
+                                   
             Rule::link => {
                 let mut inner_pairs = pair.into_inner();
                 let link_text = inner_pairs.next().ok_or_else(|| anyhow!("No inner pair found for link text"))?.as_str();

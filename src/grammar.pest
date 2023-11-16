@@ -1,7 +1,7 @@
 /// Grammar for my markdown parser 
 
 ///Root rule with all possible single rules
-content = _{ heading | text | list | link | bold }
+content = _{ heading | text | link | bold }
 
 /// Heading styling
 heading = { "#" ~ (!("\n") ~ ANY)* ~ ("\n"?) }
@@ -9,9 +9,6 @@ heading = { "#" ~ (!("\n") ~ ANY)* ~ ("\n"?) }
 /// Plain text styling
 
 text = { (!("\n" | "#" | "*" | "-" | "[" | "]" | "(" | ")" | "**") ~ ANY)+ }
-
-/// List styling
-list = { ("- " | "* ") ~ (!"\n" ~ ANY)+ }
 
 /// Bold text styling
 
