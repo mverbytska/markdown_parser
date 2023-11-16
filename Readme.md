@@ -3,6 +3,9 @@
 
 ### Link to this parser on crates.io: 
 
+### Project Structure file: 
+#### ./project_structure.txt
+
 ### Installation
 
 ### Option 1: run the following Cargo command in your project directory 
@@ -21,7 +24,6 @@ markdown_parser="0.1.0"
 #### 1. Takes a text file with a single string in markdown style as an input
 ```
 cargo run to_html </path/to/file.md>
-
 ```
 
 #### 2. The output will be a string with HTML tags to represent the result
@@ -37,5 +39,10 @@ cargo run to_html </path/to/file.md>
 cargo doc
 
 cargo doc --open
+```
+
+### In order to test the project, you can execute the following:
+```
+cargo test
 ```
 #### *KMA, Autumn, 2023*  
