@@ -8,15 +8,9 @@
 
 ### Installation
 
-### Option 1: run the following Cargo command in your project directory 
+### Run the following Cargo command in your project directory 
 ```
-cargo add markdown_parser
-```
-
-### Option 2: add the following line to the *[dependencies]* section in Cargo.toml file
-
-```
-markdown_parser="0.1.0" 
+git clone https://github.com/mverbytska/markdown_parser.git
 ```
 
 ### Technical overview:
