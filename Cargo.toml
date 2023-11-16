@@ -8,7 +8,7 @@
 # 2. Returns string with HTML tags to represent the result 
 [package]
 name = "markdown_parser"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
 readme  = "Readme.md"
 authors = ["Mariia Verbytska"]
