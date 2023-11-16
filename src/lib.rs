@@ -4,6 +4,8 @@ use anyhow::{anyhow, Result};
 
 #[derive(Parser)]
 #[grammar = "./grammar.pest"]
+
+/// Markdown Parser definition 
 pub struct MarkdownParser;
 
 /// Converts markdown-styled string into html-formatted one
