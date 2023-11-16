@@ -35,6 +35,12 @@ cargo doc
 cargo doc --open
 ```
 
+### See instructions
+
+```
+cargo run help
+```
+
 ### In order to test the project, you can execute the following:
 ```
 cargo test
